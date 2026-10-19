@@ -263,3 +263,5 @@ footer li{margin-bottom:7px;}
 @media(max-width:640px){.glimpses{grid-template-columns:1fr;}}
 
 .beta-badge{display:inline-block;font-family:system-ui,sans-serif;font-size:10px;font-weight:800;letter-spacing:1.2px;color:#fff;background:#c9a227;border-radius:6px;padding:3px 8px;margin-left:8px;vertical-align:2px;}
+
+#langSel{border:1px solid var(--line);border-radius:8px;padding:7px 6px;font-size:13px;font-weight:600;color:var(--navy);background:#fff;margin-right:10px;max-width:110px;}
