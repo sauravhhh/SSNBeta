@@ -22,14 +22,15 @@
         <span class="as">শংকৰদেৱ শিশু নিকেতন, ভূৰাগাঁও</span>
       </span>
     </a>
+    <select id="langSel" aria-label="Language"><option value="en">English</option><option value="as">অসমীয়া</option><option value="bn">বাংলা</option><option value="hi">हिन्दी</option></select>
     <button id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav id="nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="academics.html">Academics &amp; Facilities</a>
-      <a href="admissions.html">Admissions</a>
-      <a href="notices.html">Notices</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" class="active" data-i18n="nav_home">Home</a>
+      <a href="about.html" data-i18n="nav_about">About</a>
+      <a href="academics.html" data-i18n="nav_academics">Academics &amp; Facilities</a>
+      <a href="admissions.html" data-i18n="nav_admissions">Admissions</a>
+      <a href="notices.html" data-i18n="nav_notices">Notices</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -48,24 +49,24 @@
 
 <div class="hero">
   <div class="cta">
-    <a class="btn gold" href="admissions.html">Admissions</a>
-    <a class="btn ghost" href="contact.html">Contact Us</a>
+    <a class="btn gold" href="admissions.html" data-i18n="cta_admissions" data-i18n="nav_admissions">Admissions</a>
+    <a class="btn ghost" href="contact.html" data-i18n="cta_contact" data-i18n="foot_contact_us">Contact Us</a>
   </div>
 </div>
 
 <div class="stats">
   <div class="wrap">
-    <div class="stat"><b>2004</b><span>Established</span></div>
-    <div class="stat"><b>565</b><span>Students</span></div>
-    <div class="stat"><b>22</b><span>Teachers</span></div>
+    <div class="stat"><b>2004</b><span data-i18n="stat_estd">Established</span></div>
+    <div class="stat"><b>565</b><span data-i18n="stat_students">Students</span></div>
+    <div class="stat"><b>22</b><span data-i18n="stat_teachers">Teachers</span></div>
     <div class="stat"><b>13</b><span>Classes: Ankur–Prabhat, 1–10</span></div>
   </div>
 </div>
 
 <section>
   <div class="wrap">
-    <div class="kicker">Welcome</div>
-    <h2 class="stitle">Rooted in values, growing with Bhuragaon</h2>
+    <div class="kicker" data-i18n="k_welcome">Welcome</div>
+    <h2 class="stitle" data-i18n="t_welcome">Rooted in values, growing with Bhuragaon</h2>
     <p class="lede">A private, co-educational Assamese-medium school run by Shishu Shiksha Samiti, Assam — the state affiliate of Vidya Bharati — nurturing the children of greater Bhuragaon for over two decades.</p>
     <div class="cols">
       <div class="card">
@@ -83,15 +84,15 @@
 </section>
 
 <div class="motto-band">
-  <div class="kicker">Our Motto</div>
+  <div class="kicker" data-i18n="k_motto">Our Motto</div>
   <div class="as-big"><span class="as">॥ স্বয়মেৱ মৃগেন্দ্ৰতা ॥</span></div>
   <p>"Be strong through one's own qualities and deeds."</p>
 </div>
 
 <section>
   <div class="wrap">
-    <div class="kicker">Pradhan Acharya's Message</div>
-    <h2 class="stitle">From the Pradhan Acharya's desk</h2>
+    <div class="kicker" data-i18n="k_pa_msg">Pradhan Acharya's Message</div>
+    <h2 class="stitle" data-i18n="t_pa_desk">From the Pradhan Acharya's desk</h2>
     <div class="pmsg">
       <img class="pphoto" src="images/pen-hand.jpg" alt="A hand holding a fountain pen, poised to write">
       <div>
@@ -105,8 +106,8 @@
 
 <section>
   <div class="wrap">
-    <div class="kicker">Glimpses</div>
-    <h2 class="stitle">Moments from the Niketan</h2>
+    <div class="kicker" data-i18n="k_glimpses">Glimpses</div>
+    <h2 class="stitle" data-i18n="t_glimpses">Moments from the Niketan</h2>
     <div class="glimpses">
       <figure>
         <img src="images/gallery-3.jpg" alt="Felicitation ceremony honouring meritorious students, June 2022" loading="lazy">
@@ -127,8 +128,8 @@
 
 <section class="alt">
   <div class="wrap">
-    <div class="kicker">Testimonials</div>
-    <h2 class="stitle">What students and parents say</h2>
+    <div class="kicker" data-i18n="k_testi">Testimonials</div>
+    <h2 class="stitle" data-i18n="t_testi">What students and parents say</h2>
     <div class="cols" style="margin-top:18px;">
       <div class="tcard">
         <p class="tquote">"The teachers know every child by name. My daughter has grown not only in studies, but in manners and confidence."</p>
@@ -164,18 +165,18 @@
       Estd. 31 January 2004 · Bhuragaon, Morigaon, Assam</p>
     </div>
     <div>
-      <h4>Explore</h4>
+      <h4 data-i18n="foot_explore">Explore</h4>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="academics.html">Academics &amp; Facilities</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="notices.html">Notices</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="about.html" data-i18n="foot_about_us">About Us</a></li>
+        <li><a href="academics.html" data-i18n="nav_academics">Academics &amp; Facilities</a></li>
+        <li><a href="admissions.html" data-i18n="nav_admissions">Admissions</a></li>
+        <li><a href="notices.html" data-i18n="nav_notices">Notices</a></li>
+        <li><a href="contact.html" data-i18n="foot_contact_us">Contact Us</a></li>
       </ul>
     </div>
     <div>
-      <h4>Organisation</h4>
+      <h4 data-i18n="foot_org">Organisation</h4>
       <ul>
         <li><a href="https://sssassam.com/" target="_blank" rel="noopener">Shishu Shiksha Samiti, Assam</a></li>
         <li><a href="https://vidyabharti.net/" target="_blank" rel="noopener">Vidya Bharati</a></li>
@@ -183,7 +184,7 @@
     </div>
   </div>
   <div class="fbot">
-    <span>© 2026 Shankardev Shishu Niketan, Bhuragaon. All rights reserved. · Developed by <a href="https://github.com/sauravhhh" target="_blank" rel="noopener">Saurabh Saha</a></span>
+    <span>© 2026 Shankardev Shishu Niketan, Bhuragaon. All rights reserved. · <span data-i18n="foot_dev">Developed by</span> <a href="https://github.com/sauravhhh" target="_blank" rel="noopener">Saurabh Saha</a></span>
   </div>
 </footer>
 
@@ -274,5 +275,6 @@ if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.se
   restart();
 })();
 </script>
+<script src="i18n.js"></script>
 </body>
 </html>
