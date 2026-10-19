@@ -22,7 +22,7 @@
         <span class="as">শংকৰদেৱ শিশু নিকেতন, ভূৰাগাঁও</span>
       </span>
     </a>
-    <select id="langSel" aria-label="Language"><option value="en">English</option><option value="as">অসমীয়া</option><option value="bn">বাংলা</option><option value="hi">हिन्दी</option></select>
+    <div id="google_translate_element"></div>
     <button id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav id="nav">
       <a href="index.html" data-i18n="nav_home">Home</a>
@@ -223,6 +223,9 @@ if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.se
   upd();
 })();
 </script>
-<script src="i18n.js"></script>
+<script>
+function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"en",includedLanguages:"as,bn,hi",layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},"google_translate_element");}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
