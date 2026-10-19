@@ -83,15 +83,16 @@ td.m,th.m{text-align:center;}
 <header class="rhead">
   <img src="images/logo.png" alt="School emblem">
   <div><div class="en">Shankardev Shishu Niketan, Bhuragaon <span class="beta-badge">BETA</span></div><div class="as">Student Login</div></div>
-  <button id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  <select id="langSel" aria-label="Language"><option value="en">English</option><option value="as">অসমীয়া</option><option value="bn">বাংলা</option><option value="hi">हिन्दी</option></select>
+    <button id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
 </header>
 <nav id="rnav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="academics.html">Academics &amp; Facilities</a>
-  <a href="admissions.html">Admissions</a>
-  <a href="notices.html">Notices</a>
-  <a href="contact.html">Contact</a>
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="about.html" data-i18n="nav_about">About</a>
+  <a href="academics.html" data-i18n="nav_academics">Academics &amp; Facilities</a>
+  <a href="admissions.html" data-i18n="nav_admissions">Admissions</a>
+  <a href="notices.html" data-i18n="nav_notices">Notices</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact</a>
 </nav>
 <main class="wrap">
   <h1 id="ptitle">Student Login</h1>
@@ -506,5 +507,6 @@ menuBtn.onclick=function(){
 rnav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){rnav.classList.remove("open");menuBtn.classList.remove("open");document.body.style.overflow="";});});
 
 </script>
+<script src="i18n.js"></script>
 </body>
 </html>
