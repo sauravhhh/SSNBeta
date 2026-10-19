@@ -22,28 +22,29 @@
         <span class="as">শংকৰদেৱ শিশু নিকেতন, ভূৰাগাঁও</span>
       </span>
     </a>
+    <select id="langSel" aria-label="Language"><option value="en">English</option><option value="as">অসমীয়া</option><option value="bn">বাংলা</option><option value="hi">हिन्दी</option></select>
     <button id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav id="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="academics.html">Academics &amp; Facilities</a>
-      <a href="admissions.html" class="active">Admissions</a>
-      <a href="notices.html">Notices</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="about.html" data-i18n="nav_about">About</a>
+      <a href="academics.html" data-i18n="nav_academics">Academics &amp; Facilities</a>
+      <a href="admissions.html" class="active" data-i18n="nav_admissions">Admissions</a>
+      <a href="notices.html" data-i18n="nav_notices">Notices</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <div class="page-hero">
-  <h1>Admissions</h1>
+  <h1 data-i18n="pg_admissions">Admissions</h1>
   <div class="as">নামভৰ্তি</div>
   <p class="sub">Join the Niketan family — Ankur, Mukul, Prabhat and Classes 1 to 10.</p>
 </div>
 
 <section>
   <div class="wrap">
-    <div class="kicker">How to Apply</div>
-    <h2 class="stitle">A simple, personal process</h2>
+    <div class="kicker" data-i18n="k_howto">How to Apply</div>
+    <h2 class="stitle" data-i18n="t_howto">A simple, personal process</h2>
     <p class="lede">Admissions are handled directly at the school office. Parents and guardians are welcome to visit the campus near the Barduba Tup Shiva Temple, Bhuragaon.</p>
     <div class="cols">
       <div class="card">
@@ -69,8 +70,8 @@
 
 <section class="alt">
   <div class="wrap">
-    <div class="kicker">Enquire</div>
-    <h2 class="stitle">Admission enquiry form</h2>
+    <div class="kicker" data-i18n="k_enquire">Enquire</div>
+    <h2 class="stitle" data-i18n="t_enquire_form">Admission enquiry form</h2>
     <p class="lede">Fill this in and we will get back to you. Or visit the school office directly — both work.</p>
     <form class="adm-form" id="admForm" novalidate>
       <input type="hidden" name="access_key" value="dd136e0b-9b10-48d4-91e5-6a4aa4598625">
@@ -110,7 +111,7 @@
           <input id="phone" name="phone" type="tel" required autocomplete="off" placeholder="10-digit mobile number" pattern="[0-9+ ]{10,15}">
         </div>
       </div>
-      <button type="submit" class="btn navy" id="admBtn">Send enquiry</button>
+      <button type="submit" class="btn navy" id="admBtn" data-i18n="btn_send_enquiry">Send enquiry</button>
       <div class="fmsg" id="admMsg" role="status"></div>
     </form>
   </div>
@@ -167,18 +168,18 @@
       Estd. 31 January 2004 · Bhuragaon, Morigaon, Assam</p>
     </div>
     <div>
-      <h4>Explore</h4>
+      <h4 data-i18n="foot_explore">Explore</h4>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="academics.html">Academics &amp; Facilities</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="notices.html">Notices</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="about.html" data-i18n="foot_about_us">About Us</a></li>
+        <li><a href="academics.html" data-i18n="nav_academics">Academics &amp; Facilities</a></li>
+        <li><a href="admissions.html" data-i18n="nav_admissions">Admissions</a></li>
+        <li><a href="notices.html" data-i18n="nav_notices">Notices</a></li>
+        <li><a href="contact.html" data-i18n="foot_contact_us">Contact Us</a></li>
       </ul>
     </div>
     <div>
-      <h4>Organisation</h4>
+      <h4 data-i18n="foot_org">Organisation</h4>
       <ul>
         <li><a href="https://sssassam.com/" target="_blank" rel="noopener">Shishu Shiksha Samiti, Assam</a></li>
         <li><a href="https://vidyabharti.net/" target="_blank" rel="noopener">Vidya Bharati</a></li>
@@ -186,7 +187,7 @@
     </div>
   </div>
   <div class="fbot">
-    <span>© 2026 Shankardev Shishu Niketan, Bhuragaon. All rights reserved. · Developed by <a href="https://github.com/sauravhhh" target="_blank" rel="noopener">Saurabh Saha</a></span>
+    <span>© 2026 Shankardev Shishu Niketan, Bhuragaon. All rights reserved. · <span data-i18n="foot_dev">Developed by</span> <a href="https://github.com/sauravhhh" target="_blank" rel="noopener">Saurabh Saha</a></span>
   </div>
 </footer>
 
@@ -222,5 +223,6 @@ if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.se
   upd();
 })();
 </script>
+<script src="i18n.js"></script>
 </body>
 </html>
