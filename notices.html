@@ -21,20 +21,21 @@
         <span class="as">শংকৰদেৱ শিশু নিকেতন, ভূৰাগাঁও</span>
       </span>
     </a>
+    <select id="langSel" aria-label="Language"><option value="en">English</option><option value="as">অসমীয়া</option><option value="bn">বাংলা</option><option value="hi">हिन्दी</option></select>
     <button id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav id="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="academics.html">Academics &amp; Facilities</a>
-      <a href="admissions.html">Admissions</a>
-      <a href="notices.html" class="active">Notices</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="about.html" data-i18n="nav_about">About</a>
+      <a href="academics.html" data-i18n="nav_academics">Academics &amp; Facilities</a>
+      <a href="admissions.html" data-i18n="nav_admissions">Admissions</a>
+      <a href="notices.html" class="active" data-i18n="nav_notices">Notices</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <div class="page-hero">
-  <h1>Notices &amp; Updates</h1>
+  <h1 data-i18n="pg_notices">Notices &amp; Updates</h1>
   <div class="as">জাননী</div>
   <p class="sub">Announcements, exam schedules and school news — newest first.</p>
 </div>
@@ -55,18 +56,18 @@
       Estd. 31 January 2004 · Bhuragaon, Morigaon, Assam</p>
     </div>
     <div>
-      <h4>Explore</h4>
+      <h4 data-i18n="foot_explore">Explore</h4>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="academics.html">Academics &amp; Facilities</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="notices.html">Notices</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="about.html" data-i18n="foot_about_us">About Us</a></li>
+        <li><a href="academics.html" data-i18n="nav_academics">Academics &amp; Facilities</a></li>
+        <li><a href="admissions.html" data-i18n="nav_admissions">Admissions</a></li>
+        <li><a href="notices.html" data-i18n="nav_notices">Notices</a></li>
+        <li><a href="contact.html" data-i18n="foot_contact_us">Contact Us</a></li>
       </ul>
     </div>
     <div>
-      <h4>Organisation</h4>
+      <h4 data-i18n="foot_org">Organisation</h4>
       <ul>
         <li><a href="https://sssassam.com/" target="_blank" rel="noopener">Shishu Shiksha Samiti, Assam</a></li>
         <li><a href="https://vidyabharti.net/" target="_blank" rel="noopener">Vidya Bharati</a></li>
@@ -74,7 +75,7 @@
     </div>
   </div>
   <div class="fbot">
-    <span>© 2026 Shankardev Shishu Niketan, Bhuragaon. All rights reserved. · Developed by <a href="https://github.com/sauravhhh" target="_blank" rel="noopener">Saurabh Saha</a></span>
+    <span>© 2026 Shankardev Shishu Niketan, Bhuragaon. All rights reserved. · <span data-i18n="foot_dev">Developed by</span> <a href="https://github.com/sauravhhh" target="_blank" rel="noopener">Saurabh Saha</a></span>
   </div>
 </footer>
 
@@ -134,5 +135,6 @@ if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.se
   upd();
 })();
 </script>
+<script src="i18n.js"></script>
 </body>
 </html>
