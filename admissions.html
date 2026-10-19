@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admissions — Shankardev Shishu Niketan, Bhuragaon</title>
+<meta name="description" content="Admissions at Shankardev Shishu Niketan, Bhuragaon — visit the school office near Barduba Tup Shiva Temple for admission to Ankur, Mukul, Prabhat and Classes 1–10.">
+<link rel="icon" href="images/logo.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#16345f">
+<link rel="apple-touch-icon" href="images/icon-apple-touch.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="hbar">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Shankardev Shishu Niketan emblem">
+      <span class="hname">
+        <span class="en">Shankardev Shishu Niketan, Bhuragaon <span class="beta-badge">BETA</span></span>
+        <span class="as">শংকৰদেৱ শিশু নিকেতন, ভূৰাগাঁও</span>
+      </span>
+    </a>
+    <button id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="academics.html">Academics &amp; Facilities</a>
+      <a href="admissions.html" class="active">Admissions</a>
+      <a href="notices.html">Notices</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <h1>Admissions</h1>
+  <div class="as">নামভৰ্তি</div>
+  <p class="sub">Join the Niketan family — Ankur, Mukul, Prabhat and Classes 1 to 10.</p>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">How to Apply</div>
+    <h2 class="stitle">A simple, personal process</h2>
+    <p class="lede">Admissions are handled directly at the school office. Parents and guardians are welcome to visit the campus near the Barduba Tup Shiva Temple, Bhuragaon.</p>
+    <div class="cols">
+      <div class="card">
+        <h3>Steps</h3>
+        <ul>
+          <li>Visit the school office during working hours</li>
+          <li>Carry the child's birth certificate and previous report card (if applicable)</li>
+          <li>Meet our teachers to understand the Niketan's values and daily routine</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Why families choose us</h3>
+        <ul>
+          <li>Value-based education in the mother tongue</li>
+          <li>Small, caring rural campus in central Bhuragaon</li>
+          <li>Experienced acharyas — 22 teachers for about 565 students</li>
+          <li>Part of the 550+ strong Shishu Shiksha Samiti, Assam family</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Enquire</div>
+    <h2 class="stitle">Admission enquiry form</h2>
+    <p class="lede">Fill this in and we will get back to you. Or visit the school office directly — both work.</p>
+    <form class="adm-form" id="admForm" novalidate>
+      <input type="hidden" name="access_key" value="dd136e0b-9b10-48d4-91e5-6a4aa4598625">
+      <input type="hidden" name="subject" value="New admission enquiry — SSN Bhuragaon website">
+      <input type="hidden" name="from_name" value="SSN Bhuragaon Website">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+      <div class="frow">
+        <div class="field">
+          <label for="sname">Student Name <span class="req">*</span></label>
+          <input id="sname" name="student_name" type="text" required autocomplete="off" placeholder="Full name of the child">
+        </div>
+        <div class="field">
+          <label for="pname">Parents Name <span class="req">*</span></label>
+          <input id="pname" name="parent_name" type="text" required autocomplete="off" placeholder="Parent or guardian name">
+        </div>
+      </div>
+      <div class="frow">
+        <div class="field">
+          <label for="sage">Student Age <span style="font-weight:400;letter-spacing:.3px;text-transform:none">— optional</span></label>
+          <input id="sage" name="student_age" type="number" min="2" max="20" autocomplete="off" placeholder="Age in years">
+        </div>
+        <div class="field">
+          <label for="cls">Class Want to Take Admission <span class="req">*</span></label>
+          <select id="cls" name="class_applying" required>
+            <option value="" disabled selected>Select class</option>
+            <option>Ankur</option><option>Mukul</option><option>Prabhat</option>
+            <option>Class 1</option><option>Class 2</option><option>Class 3</option>
+            <option>Class 4</option><option>Class 5</option><option>Class 6</option>
+            <option>Class 7</option><option>Class 8</option><option>Class 9</option>
+            <option>Class 10</option>
+          </select>
+        </div>
+      </div>
+      <div class="frow full">
+        <div class="field">
+          <label for="phone">Calling Number <span class="req">*</span></label>
+          <input id="phone" name="phone" type="tel" required autocomplete="off" placeholder="10-digit mobile number" pattern="[0-9+ ]{10,15}">
+        </div>
+      </div>
+      <button type="submit" class="btn navy" id="admBtn">Send enquiry</button>
+      <div class="fmsg" id="admMsg" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<script>
+(function(){
+  var form=document.getElementById("admForm");
+  if(!form) return;
+  var btn=document.getElementById("admBtn"), msg=document.getElementById("admMsg");
+  function show(text,ok){
+    msg.textContent=text;
+    msg.className="fmsg "+(ok?"ok":"err");
+  }
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+    var key=form.querySelector('input[name="access_key"]').value;
+    if(!key||key.indexOf("PASTE_YOUR")===0){
+      show("The form is not connected yet. The school needs to add its Web3Forms key.",false);
+      return;
+    }
+    btn.disabled=true; btn.textContent="Sending…"; msg.className="fmsg";
+    fetch("https://api.web3forms.com/submit",{
+      method:"POST",
+      body:new FormData(form)
+    }).then(function(r){ return r.json(); }).then(function(j){
+      if(j.success){
+        show("Enquiry sent successfully. Our admission adviser will contact you shortly.",true);
+        form.reset();
+      }else{
+        show("Something went wrong. Please try again or visit the school office.",false);
+      }
+    }).catch(function(){
+      show("Could not send. Please check your connection and try again.",false);
+    }).finally(function(){
+      btn.disabled=false; btn.textContent="Send enquiry";
+    });
+  });
+})();
+</script>
+
+<div class="cta-band">
+  <h2 class="serif">Come, see the campus</h2>
+  <p>The best way to know the Niketan is to walk through it. Find us beside the Shiva temple in the heart of Bhuragaon.</p>
+  <a class="btn gold" href="contact.html">Find Us</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>Shankardev Shishu Niketan, Bhuragaon</h4>
+      <p><span class="as">শংকৰদেৱ শিশু নিকেতন, ভূৰাগাঁও</span><br>
+      Estd. 31 January 2004 · Bhuragaon, Morigaon, Assam</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="academics.html">Academics &amp; Facilities</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="notices.html">Notices</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Organisation</h4>
+      <ul>
+        <li><a href="https://sssassam.com/" target="_blank" rel="noopener">Shishu Shiksha Samiti, Assam</a></li>
+        <li><a href="https://vidyabharti.net/" target="_blank" rel="noopener">Vidya Bharati</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2026 Shankardev Shishu Niketan, Bhuragaon. All rights reserved. · Developed by <a href="https://github.com/sauravhhh" target="_blank" rel="noopener">Saurabh Saha</a></span>
+  </div>
+</footer>
+
+<script>
+var menuBtn=document.getElementById("menuBtn"),nav=document.getElementById("nav");
+menuBtn.onclick=function(){
+  menuBtn.classList.add("anim");
+  var open=nav.classList.toggle("open");
+  menuBtn.classList.toggle("open",open);
+  if(open){
+    var r=menuBtn.getBoundingClientRect();
+    nav.style.setProperty("--cx",(r.left+r.width/2)+"px");
+    nav.style.setProperty("--cy",(r.top+r.height/2)+"px");
+    document.body.style.overflow="hidden";
+  }else{document.body.style.overflow="";}
+};
+nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("open");menuBtn.classList.remove("open");document.body.style.overflow="";});});
+</script>
+<script>
+if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}
+</script>
+<div id="scrollProgress"></div>
+<script>
+(function(){
+  var bar = document.getElementById('scrollProgress');
+  function upd(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', upd, {passive:true});
+  window.addEventListener('resize', upd);
+  upd();
+})();
+</script>
+</body>
+</html>
